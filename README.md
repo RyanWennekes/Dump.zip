@@ -20,6 +20,7 @@ You're all set! Make sure you having a working MySQL connection, and use-passwor
 When you have succesfully installed Dump, you are now able to apply it from the command line. The structure is incredibly simple. First, enter the 'dump' command, followed by the name of the Database of which you want to dump its contents, ended by the name of the Database you want to import the Dump into. Here's a quick example:
 
 **In the command line:**
+
 `C:/[path]> Dump database_production database_development`
 
 
