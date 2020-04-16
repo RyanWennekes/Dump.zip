@@ -15,6 +15,12 @@ Dump is a Batch script that allows developers to quickly dump the contents of on
 
 You're all set! Make sure you having a working MySQL connection, and use-password is set to none.
 
+## Manual:
+
+When you have succesfully installed Dump, you are now able to apply it from the command line. The structure is incredibly simple. First, enter the 'dump' command, followed by the name of the Database of which you want to dump its contents, ended by the name of the Database you want to import the Dump into. Here's a quick example:
+
+Dump database_production database_development
+
 
 ~ Ryan Wennekes 2020
 
