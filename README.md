@@ -1,7 +1,7 @@
 # Dump.zip
-Simple, light-weight Batch script that dumps contents of one MySQL database into another
+Simple, light-weight Batch script that dumps contents of one MySQL database into another.
 
-Dump is a Batch script that allows developers to quickly dump the contents of one mysql database into another.
+Dump is a Batch script that allows developers to quickly dump the contents of one mysql database into another, using the MySQLDump client utility.
 
 ## Installation proces:
 
