@@ -34,9 +34,22 @@ IF NOT !numberOfParameters! EQU !parametersExpected! (
 	EXIT /B
 )
 
+IF NOT EXIST C:\dumpBackup\%2 (
+	IF NOT EXIST C:\dumpBackup (
+		mkdir C:\dumpBackup
+	)
+	
+	mkdir C:\dumpBackup\%2
+)
+ECHO Storing Backup of '%target%'...
+SET filename=%date:~9,4%%date:~6,2%%date:~3,2%-%time:~0,2%%time:~3,2%%time:~6,2%.sql
+mysqldump %2 > "C:\dumpBackup\%2\%filename%"
+ECHO Backup of '%target%' has been stored in "C:\dumpBackup\%target%\%filename%"^^!
+ECHO.
 ECHO Dumping MySQL Database '%source%' into '%target%'...
 mysqldump %1 > output.sql
 mysql %2 < output.sql
 DEL output.sql
+ECHO Dump completed succesfully^^!
 endlocal
 
